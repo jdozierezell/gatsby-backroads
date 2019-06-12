@@ -11,6 +11,14 @@ exports.createPages = async ({ graphql, actions }) => {
                     }
                 }
             }
+            redirects: allContentfulRedirect {
+                edges {
+                    node {
+                        oldUrl
+                        newUrl
+                    }
+                }
+            }
         }
     `)
 
@@ -24,9 +32,11 @@ exports.createPages = async ({ graphql, actions }) => {
         })
     })
 
-    createRedirect({
-        fromPath: '/test',
-        toPath: 'https://example.com',
-        isPermanent: true,
+    data.redirects.edges.forEach(({ node }) => {
+        createRedirect({
+            fromPath: node.oldUrl,
+            toPath: node.newUrl,
+            isPermanent: true,
+        })
     })
 }
