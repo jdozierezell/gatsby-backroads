@@ -1,5 +1,6 @@
 .idea/
 .env.development
+.env.production
 
 # Logs
 logs

@@ -19,6 +19,7 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-transition-link`,
+        `gatsby-plugin-playground`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -34,5 +35,6 @@ module.exports = {
                 accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
             },
         },
+        `gatsby-plugin-client-side-redirect`, // keep it in last in list
     ],
 }
