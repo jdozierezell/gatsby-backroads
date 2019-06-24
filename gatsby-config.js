@@ -8,10 +8,9 @@ module.exports = {
             'Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily' +
             ' routine & say yes to adventure',
         author: 'Jonathan Dozier-Ezell',
-        data: {
-            name: 'john',
-            age: 24,
-        },
+        twitterUsername: '@jdozierezell',
+        image: '/defaultBcg.jpeg',
+        siteUrl: 'https://gatsby-tours-jde.netlify.com',
     },
     plugins: [
         `gatsby-plugin-sass`,
@@ -20,6 +19,7 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-plugin-transition-link`,
         `gatsby-plugin-playground`,
+        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
